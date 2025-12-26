@@ -247,6 +247,63 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 
 ---
 
+### 5. POST /quality-flags-from-csv – полный набор флагов качества из CSV-файла
+НОВЫЙ ЭНДПОИНТ – возвращает полный набор флагов качества, включая новые эвристики из HW03.
+
+- Эндпоинт принимает CSV-файл, внутри:
+- читает его в pandas.DataFrame;
+- вызывает функции из eda_cli.core:
+- summarize_dataset,
+- missing_table,
+- compute_quality_flags с новыми эвристиками из HW03;
+- возвращает полный словарь флагов со всеми типами данных (не только булевыми).
+
+Запрос:
+```http
+POST /quality-flags-from-csv
+Content-Type: multipart/form-data
+file: <CSV-файл>
+```
+Пример ответа(200-ОК):
+```json
+{
+  "flags": {
+    "too_few_rows": false,
+    "too_many_columns": false,
+    "too_many_missing": false,
+    "max_missing_share": 0.15,
+    "has_constant_columns": true,
+    "constant_columns": ["id_column"],
+    "constant_columns_count": 1,
+    "has_high_cardinality_categoricals": false,
+    "high_cardinality_columns": [],
+    "high_cardinality_threshold": 100,
+    "quality_score": 0.85
+  },
+  "dataset_shape": {
+    "n_rows": 10000,
+    "n_cols": 12
+  },
+  "latency_ms": 15.2,
+  "filename": "example.csv"
+}
+```
+Возвращает:
+
+- Возвращает все флаги из compute_quality_flags, включая:
+- Новые эвристики из HW03: has_constant_columns, has_high_cardinality_categoricals
+- Детальную информацию: списки константных колонок, статистику кардинальности
+- Числовые значения: quality_score, max_missing_share
+- Полезен для детального анализа качества датасета
+- Использует доработки из HW03 (новые эвристики качества)
+
+Пример вызова через curl:
+```bash
+curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
+  -F "file=@data/example.csv"
+```
+
+---
 ## Структура проекта (упрощённо)
 
 ```text
