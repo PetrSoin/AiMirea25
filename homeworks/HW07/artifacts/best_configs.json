@@ -1,0 +1,26 @@
+{
+  "deep1": {
+    "best_method": "DBSCAN",
+    "parameters": {
+      "eps": 0.1,
+      "min_samples": 2
+    },
+    "criterion": "max_silhouette_score"
+  },
+  "deep2": {
+    "best_method": "DBSCAN",
+    "parameters": {
+      "eps": 1.0,
+      "min_samples": 2
+    },
+    "criterion": "max_silhouette_score"
+  },
+  "deep3": {
+    "best_method": "DBSCAN",
+    "parameters": {
+      "eps": 0.8,
+      "min_samples": 2
+    },
+    "criterion": "max_silhouette_score"
+  }
+}
