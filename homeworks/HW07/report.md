@@ -73,7 +73,7 @@
 
 Для каждого датасета – краткая сводка результатов.
 
-### 4.1 Dataset A (s07-hw-dataset-01.csv)
+### 4.1 Dataset A
 
 - Лучший метод и параметры: DBSCAN (eps=0.10, min_samples=2)
 - Метрики:
@@ -82,7 +82,7 @@
   - Calinski-Harabasz: 1468.0
 - - Доля шума: 0.991
 - Коротко: DBSCAN показал лучшие результаты на этом датасете
-### 4.2 Dataset B (s07-hw-dataset-02.csv)
+### 4.2 Dataset B
 
 - Лучший метод и параметры: DBSCAN (eps=1.00, min_samples=2)
 - Метрики:
@@ -91,7 +91,7 @@
   - Calinski-Harabasz: 13.7
 - - Доля шума: 0.001
 - Коротко: DBSCAN показал лучшие результаты на этом датасете
-### 4.3 Dataset C (s07-hw-dataset-03.csv)
+### 4.3 Dataset C
 
 - Лучший метод и параметры: DBSCAN (eps=0.80, min_samples=2)
 - Метрики:
