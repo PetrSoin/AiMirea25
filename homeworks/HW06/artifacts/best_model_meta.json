@@ -1,56 +1,58 @@
 {
-    "best_model_name": "RandomForest",
-    "best_model_type": "<class 'sklearn.ensemble._forest.RandomForestClassifier'>",
+    "best_model_name": "GradientBoosting",
+    "best_model_type": "<class 'sklearn.ensemble._gb.GradientBoostingClassifier'>",
     "best_params": {
-        "max_depth": null,
+        "learning_rate": 0.2,
+        "max_depth": 7,
         "min_samples_leaf": 1,
-        "n_estimators": 100
+        "n_estimators": 100,
+        "subsample": 0.9
     },
     "test_metrics": {
-        "accuracy": 0.9258333333333333,
-        "f1_score": 0.8792401628222524,
-        "roc_auc": 0.9665757833528008
+        "accuracy": 0.9304166666666667,
+        "f1_score": 0.8885923949299533,
+        "roc_auc": 0.9716534520847088
     },
     "top_features": [
         {
             "feature": "num19",
-            "importance_mean": 0.09241666666666659
+            "importance_mean": 0.10658333333333334
         },
         {
             "feature": "num18",
-            "importance_mean": 0.07716666666666665
+            "importance_mean": 0.09866666666666665
         },
         {
             "feature": "num07",
-            "importance_mean": 0.04149999999999994
+            "importance_mean": 0.057500000000000016
         },
         {
             "feature": "num04",
-            "importance_mean": 0.01866666666666663
+            "importance_mean": 0.023250000000000014
         },
         {
             "feature": "num24",
-            "importance_mean": 0.013166666666666637
-        },
-        {
-            "feature": "num21",
-            "importance_mean": 0.011083333333333289
+            "importance_mean": 0.018500000000000006
         },
         {
             "feature": "num20",
-            "importance_mean": 0.010666666666666625
-        },
-        {
-            "feature": "num22",
-            "importance_mean": 0.009749999999999948
+            "importance_mean": 0.01499999999999999
         },
         {
             "feature": "num01",
-            "importance_mean": 0.009666666666666601
+            "importance_mean": 0.013750000000000017
+        },
+        {
+            "feature": "num22",
+            "importance_mean": 0.011083333333333334
         },
         {
             "feature": "num14",
-            "importance_mean": 0.009583333333333277
+            "importance_mean": 0.010083333333333356
+        },
+        {
+            "feature": "num16",
+            "importance_mean": 0.009166666666666701
         }
     ]
 }
