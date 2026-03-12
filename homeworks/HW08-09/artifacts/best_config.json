@@ -1,0 +1,32 @@
+{
+  "model": {
+    "architecture": "MLP",
+    "input_size": 3072,
+    "hidden_sizes": [
+      512,
+      256
+    ],
+    "num_classes": 10,
+    "dropout": 0.0,
+    "use_batchnorm": true
+  },
+  "training": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0,
+    "batch_size": 128,
+    "epochs_trained": 7,
+    "early_stopping_patience": 4
+  },
+  "dataset": {
+    "name": "CIFAR10",
+    "train_size": 40000,
+    "val_size": 10000,
+    "test_size": 10000
+  },
+  "seed": 42,
+  "best_val_accuracy": 50.01,
+  "best_val_loss": 1.4234636599504495,
+  "test_accuracy": 46.02,
+  "test_loss": 1.6676397187800347
+}
