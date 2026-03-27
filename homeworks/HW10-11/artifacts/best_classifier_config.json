@@ -1,0 +1,25 @@
+{
+    "dataset": "CIFAR10",
+    "num_classes": 10,
+    "best_experiment": "C2",
+    "best_val_accuracy": 0.7658,
+    "test_accuracy": 0.7617,
+    "seed": 42,
+    "epochs": 10,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss",
+    "architecture": "SimpleCNN",
+    "model_params": {
+        "conv_layers": [
+            32,
+            64,
+            128
+        ],
+        "fc_layers": [
+            256,
+            10
+        ],
+        "dropout": 0.5
+    }
+}
