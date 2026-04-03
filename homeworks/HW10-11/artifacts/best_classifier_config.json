@@ -1,25 +1,21 @@
 {
-    "dataset": "CIFAR10",
-    "num_classes": 10,
-    "best_experiment": "C2",
-    "best_val_accuracy": 0.7658,
-    "test_accuracy": 0.7617,
+    "dataset": "CIFAR100",
+    "num_classes": 100,
+    "best_experiment": "C4",
+    "best_val_accuracy": 0.6586,
+    "test_accuracy": 0.021,
     "seed": 42,
-    "epochs": 10,
-    "learning_rate": 0.001,
+    "epochs_trained": 10,
+    "learning_rate": 0.0005,
+    "batch_size": 64,
     "optimizer": "Adam",
     "loss_function": "CrossEntropyLoss",
-    "architecture": "SimpleCNN",
-    "model_params": {
-        "conv_layers": [
-            32,
-            64,
-            128
-        ],
-        "fc_layers": [
-            256,
-            10
-        ],
-        "dropout": 0.5
-    }
+    "architecture": "ResNet18",
+    "training_strategy": "fine_tune",
+    "pretrained_weights": "ResNet18_Weights.IMAGENET1K_V1",
+    "transforms": "ToTensor(), Normalize(mean=[0.5071, 0.4865, 0.4409], std=[0.2673, 0.2564, 0.2762])",
+    "augmentation": "None",
+    "preprocess": "ResNet18_Weights.IMAGENET1K_V1.transforms()",
+    "model_summary": "Best model from experiment C4 for CIFAR100 classification",
+    "notes": "Best validation accuracy: 0.6586, Test accuracy: 0.0210"
 }

@@ -1,7 +1,7 @@
 experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
-C1,classification,CIFAR10,42,SimpleCNN,Adam,0.001,10,0.7653,,,,,simple CNN без аугментаций
-C2,classification,CIFAR10,42,SimpleCNN,Adam,0.001,10,0.7658,0.7617,,,,simple CNN с аугментациями
-C3,classification,CIFAR10,42,ResNet18_head_only,Adam,0.001,10,0.4636,,,,,"ResNet18, backbone заморожен, обучается только голова"
-C4,classification,CIFAR10,42,ResNet18_finetune,Adam,0.0005,10,0.7046,,,,,"ResNet18, разморожен layer4 и fc"
-V1,segmentation,OxfordIIITPet,42,DeepLabV3_ResNet50,,,,,,,,0.0,"threshold=0.3, без постобработки"
-V2,segmentation,OxfordIIITPet,42,DeepLabV3_ResNet50,,,,,,,,0.0,"threshold=0.7, удаление маленьких компонент (min_size=500)"
+C1,classification,CIFAR100,42,SimpleCNN,Adam,0.001,10,0.3944,,,,,simple CNN без аугментаций
+C2,classification,CIFAR100,42,SimpleCNN,Adam,0.001,10,0.3726,,,,,simple CNN с аугментациями
+C3,classification,CIFAR100,42,ResNet18_head_only,Adam,0.001,10,0.5529,,,,,"ResNet18 pretrained, backbone заморожен, обучается только голова"
+C4,classification,CIFAR100,42,ResNet18_finetune,Adam,0.0005,10,0.6586,0.021,,,,"ResNet18 pretrained, разморожен layer4 и fc"
+V1,segmentation,OxfordIIITPet,42,FCN_ResNet50,,,,,,,,0.06203451565487482,"threshold=0.3, базовая постобработка"
+V2,segmentation,OxfordIIITPet,42,FCN_ResNet50,,,,,,,,0.022519365108288,"threshold=0.7, удаление маленьких компонент (min_size=500)"
